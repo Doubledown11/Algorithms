@@ -33,7 +33,7 @@ def binary_search_desc(nums, low, high, target):
 
         # If target is bigger than the value at the middle of the list
         # it can only be in the right side of the list.
-        elif nums[middle] < target:
+        elif nums[middle] > target:
             return binary_search_asc(nums, low, middle - 1, target)
 
         # If the target is smaller than the value at the middle of the list
