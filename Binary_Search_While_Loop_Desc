@@ -1,0 +1,32 @@
+""" 
+Binary Search using a While Loop 
+Space/Time complexity of O(log n)
+
+For lists in ascending order. 
+
+Dalice Dieckman
+Date: 2024-12-12
+"""
+
+
+
+nums = [9,8,7,6,5,4,3,2,1]
+target = 3
+
+low = 0
+high  = len(nums) - 1
+
+while low <= high:
+    mid = (low + high) // 2
+    if nums[mid] == target:
+        print(mid)
+        exit()
+
+    else:
+        # if number in the middle is bigger then the target, our target must be in the right side of the list.
+        if nums[mid] > target:
+            low = mid + 1      
+
+        # If middle number is smaller, it must be in the left side of the list.
+        else:
+             high = mid - 1
